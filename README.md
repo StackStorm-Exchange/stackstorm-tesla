@@ -10,10 +10,20 @@ or aliases raise an Exception or aren't compatible.
 
 ## Configuration
 
+Copy the example configuration in [tesla.yaml.example](./tesla.yaml.example)
+to `/opt/stackstorm/configs/tesla.yaml` and edit as required.
+
+It must contain:
+
 * ``tesla_username`` - Your tesla online username (email)
 * ``tesla_password`` - Your tesla online password
 
+**Note** : When modifying the configuration in `/opt/stackstorm/configs/` please
+           remember to tell StackStorm to load these new values by running
+           `st2ctl reload --register-configs`
+
 ## Actions
+
 * `charge_vehicle` - Set the charge pattern to standard
 * `charge_vehicle_max_range` - Set the charge pattern to max
 * `flash_lights` - Flash the lights of the car
