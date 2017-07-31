@@ -1,4 +1,4 @@
-# Telsa Motors Integration Pack
+# Tesla Motors Integration Pack
 
 Include your tesla automobile in your ChatOps workflows.
 
