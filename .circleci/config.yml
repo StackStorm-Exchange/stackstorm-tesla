@@ -7,8 +7,6 @@ jobs:
       - image: rabbitmq:3
       - image: mongo:3.4
 
-    working_directory: ~/repo
-
     environment:
       VIRTUALENV_DIR: "~/virtualenv"
 
@@ -37,7 +35,6 @@ jobs:
             - home/circleci/ci
             - home/circleci/virtualenv
             - tmp/st2
-            - home/circleci/repo
             - home/circleci/.gitconfig
 
   # NOTE: Until we add "python_version" metadata attribute to pack.yaml and
@@ -48,8 +45,6 @@ jobs:
       - image: circleci/python:3.6
       - image: rabbitmq:3
       - image: mongo:3.4
-
-    working_directory: ~/repo
 
     environment:
       VIRTUALENV_DIR: "~/virtualenv"
@@ -75,8 +70,6 @@ jobs:
   deploy:
     docker:
       - image: circleci/python:2.7
-
-    working_directory: ~/repo
 
     environment:
       VIRTUALENV_DIR: "~/virtualenv"
