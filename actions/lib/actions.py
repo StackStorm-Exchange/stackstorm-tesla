@@ -1,6 +1,8 @@
-from st2common.runners.base_action import Action
-from parsers import ResultSets
 import pytesla
+
+from st2common.runners.base_action import Action
+
+from .parsers import ResultSets
 
 
 class BaseAction(Action):
