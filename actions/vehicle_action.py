@@ -7,6 +7,7 @@ __all__ = [
 
 class VehicleAction(BaseAction):
     def run(self, vin, action, **kwargs):
+        # pylint: disable=no-member
         if vin is None:
             vehicle = self.connection.vehicles()[0]
         else:

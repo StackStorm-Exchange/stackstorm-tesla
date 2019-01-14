@@ -8,4 +8,4 @@ __all__ = [
 class GetVehicleAction(BaseAction):
     def run(self, vin):
         return self.formatter.formatter(
-            self.connection.vehicle(vin))
+            self.connection.vehicle(vin))  # pylint: disable=no-member
